@@ -2,7 +2,7 @@
 
 A powerful, multi-stage lossless image compression tool that combines advanced algorithms to achieve exceptional compression ratios without any quality loss. Built with Python and featuring an intuitive GUI, this tool makes professional-grade image compression accessible to everyone.
 
-![Application Screenshot](images/app_screenshot.png)
+![Application Screenshot](screenshots/app_screenshot.png)
 *Main application interface*
 
 ## ✨ Features
@@ -31,7 +31,14 @@ git clone https://github.com/yAsh-081/Lossless-Image-Compression-Software.git
 cd Lossless-Image-Compression-Software
 ```
 
-2. Ensure you have Python 3.7+ installed (no additional dependencies required - uses only Python standard library)
+2. Get numpy library for image vector processing:
+```
+pip install numpy
+```
+or
+```
+pip install -r requirements.txt
+```
 
 ### Usage
 
@@ -40,21 +47,20 @@ cd Lossless-Image-Compression-Software
 python main.py
 ```
 
-2. **Select an image**: Click the "Browse" or "Select Image" button to choose a BMP image
+2. **Select an image**: Click the "Open BMP File" button to choose a BMP image
 
-3. **Compress**: Click the "Compress" button to start the compression process
+3. **Compress**: Click the "Compress to .custom_compressed" button and name the new compressed file (to save it for future use) to start the compression process
 
 4. **View Results**: The application will display:
-   - Original file size
+   - Original BMP file size
    - Compressed file size
    - Compression ratio percentage
-   - Processing time
+   - Space saved on the memory
+   - Compression time
 
-5. **Save Compressed File**: Save your compressed image with the `.compressed` extension
+5. **Decompress** (optional): Load a compressed file and decompress it to restore the original image by clicking "Open .custom_compressed File"
 
-6. **Decompress** (optional): Load a compressed file and decompress it to restore the original image
-
-![Compression Process](images/compression_demo.png)
+![Compression Process](screenshots/compression_demo.png)
 *Compression process demonstration*
 
 ## 🔧 How It Works
@@ -73,15 +79,6 @@ Assigns variable-length codes to symbols based on their frequency, with more com
 ### Dynamic Technique Selection
 The software intelligently analyzes each image and selects the optimal combination of techniques, improving average compression ratios by 15-25% across diverse image types.
 
-## 📊 Performance
-
-![Test Results](images/test_results.png)
-*Compression performance across different image types*
-
-- **Average Compression Ratio**: 40-77% depending on image content
-- **Processing Speed**: Real-time compression for images up to 10MB
-- **Memory Efficiency**: Optimized algorithms minimize RAM usage
-- **Tree Storage Overhead**: Reduced by 60-80% through compact binary format
 
 ## 🛠️ Technical Details
 
@@ -91,7 +88,7 @@ The software intelligently analyzes each image and selects the optimal combinati
 - BMP (24-bit per pixel)
 
 ### Compression Format
-Compressed files use a custom binary format (`.compressed`) that includes:
+Compressed files use a custom binary format (`.custom_compressed`) that includes:
 - Compressed image data
 - Huffman tree structure (optimized serialization)
 - Metadata for perfect reconstruction
@@ -108,19 +105,14 @@ Compressed files use a custom binary format (`.compressed`) that includes:
 ```
 Lossless-Image-Compression-Software/
 ├── main.py    # Complete application (GUI + algorithms)
-├── test/                  # Test images (8 sample BMP files)
+├── test_images/                  # Test images (4 sample BMP files with compressed version)
 │   ├── image1.bmp
 │   ├── image2.bmp
 │   └── ...
+├── requirements.txt
+├── screenshots                   # Screenshots of the application for readme
 └── README.md
 ```
-
-## 🧪 Testing
-
-The `test/` folder contains 8 sample BMP images for testing the compression algorithm on different image types and complexities. Simply load any of these images through the GUI to see the compression results.
-
-![Test Results](images/test_results.png)
-*Compression performance across the 8 test images*
 
 ## 🤝 Contributing
 
@@ -130,11 +122,6 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- Paeth prediction algorithm from the PNG specification
-- Huffman coding theory by David A. Huffman
-- Inspiration from modern lossless compression standards
 
 ## 📧 Contact
 
@@ -142,5 +129,5 @@ For questions or feedback, please open an issue on GitHub.
 
 ---
 
-**Author**: Yash  
+**Author**: Yash Patel
 **Repository**: [github.com/yAsh-081/Lossless-Image-Compression-Software](https://github.com/yAsh-081/Lossless-Image-Compression-Software)
