@@ -2,8 +2,9 @@
 
 A powerful, multi-stage lossless image compression tool that combines advanced algorithms to achieve exceptional compression ratios without any quality loss. Built with Python and featuring an intuitive GUI, this tool makes professional-grade image compression accessible to everyone.
 
-![Application Screenshot](screenshots/app_screenshot.png)
-*Main application interface*
+<p align="center">
+  <img src="screenshots/app_screenshot.png" alt="Main application interface" />
+</p>
 
 ## ✨ Features
 
@@ -60,8 +61,10 @@ python main.py
 
 5. **Decompress** (optional): Load a compressed file and decompress it to restore the original image by clicking "Open .custom_compressed File"
 
-![Compression Process](screenshots/compression_demo.png)
-*Compression process demonstration*
+
+<p align="center">
+  <img src="screenshots/compression_demo.png" alt="Compression process demonstration" />
+</p>
 
 ## 🔧 How It Works
 
